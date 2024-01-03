@@ -1,4 +1,4 @@
-CFLAGS_ALL=-I../libusbgx/build/include -I../bcm2835-1.68/build/include -L../bcm2835-1.68/build/lib -I../lua-5.4.0/src -L../libusbgx/build/lib -L../libserialport/build/lib -L../lua-5.4.0/src -lpng -lz -lpthread -llua -lm -lbcm2835 -ldl
+CFLAGS_ALL=-I../libusbgx/build/include -I../bcm2835-1.73/build/include -L../bcm2835-1.73/build/lib -I../lua-5.4.0/src -L../libusbgx/build/lib -L../libserialport/build/lib -L../lua-5.4.0/src -lpng -lz -lpthread -llua -lm -lbcm2835 -ldl
 
 
 keybow: CFLAGS+=-static $(CFLAGS_ALL) -lusbgx -lconfig
@@ -11,7 +11,7 @@ luatest: luatest.c
 	$(CC) $^ $(CFLAGS) -o $@
 
 
-lightstest: CFLAGS+=-I../bcm2835-1.68/src -L../bcm2835-1.68/src -lpng -lbcm2835 -lpthread
+lightstest: CFLAGS+=-I../bcm2835-1.73/src -L../bcm2835-1.73/src -lpng -lbcm2835 -lpthread
 lightstest: lightstest.c lights.c
 	$(CC) $^ $(CFLAGS) -o $@
 

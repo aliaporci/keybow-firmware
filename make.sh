@@ -3,7 +3,7 @@ set -e
 
 WORKING_DIR=$(pwd)
 
-cd bcm2835-1.68
+cd bcm2835-1.73
 autoreconf -i
 ./configure --prefix=$(pwd)/build
 make
