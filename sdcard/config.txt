@@ -9,6 +9,8 @@ dtoverlay=dwc2
 # Uncomment for pHAT BEAT, pHAT DAC or Speaker pHAT
 #dtparam=hifiberry-dac
 
+kernel=kernel7.img
+
 gpu_mem=16
 
 initramfs initrd
